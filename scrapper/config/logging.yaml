@@ -1,0 +1,58 @@
+version: 1
+disable_existing_loggers: false
+formatters:
+    simple:
+        format: '%(levelname)-8s %(module)-10s %(lineno)-3d %(message)s'
+        datefmt: '%H:%M:%S'
+handlers:
+    console:
+        class: logging.StreamHandler
+        level: DEBUG
+        formatter: simple
+        stream: ext://sys.stdout
+    file:
+        class: logging.FileHandler
+        level: DEBUG
+        formatter: simple
+        mode: w
+        filename: scrapper-log.txt
+
+loggers:
+    scrapper:
+        level: DEBUG
+        handlers: [file]
+        propagate: false
+
+    scrapper.app:
+        level: DEBUG
+        handlers: [console]
+        propagate: true
+
+    scrapper.crawler.factory:
+        level: DEBUG
+        handlers: [console]
+        propagate: true
+
+    scrapper.crawler.glassdoor:
+        level: DEBUG
+        handlers: [console]
+        propagate: true
+
+    scrapper.crawler.hidemy:
+        level: DEBUG
+        handlers: [console]
+        propagate: true
+
+    scrapper.storage.database:
+        level: DEBUG
+        handlers: [console]
+        propagate: true
+
+    scrapper.utils:
+        level: DEBUG
+        handlers: [console]
+        propagate: true
+
+root:
+    level: CRITICAL
+    handlers: [console]

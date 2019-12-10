@@ -1,0 +1,6 @@
+- example_task:
+    site_name: glassdoor
+    search_keywords: Nordcloud
+    scrapping_link: https://www.glassdoor.com/Job/jobs.htm?suggestCount=0&suggestChosen=true&clickSource=searchBtn&typedKeyword=Soft&sc.keyword=Software+Engineer&locT=C&locId=2970449&jobType=
+    scrapping_period_in_hours: 1
+    minimal_results_count: 5

@@ -1,0 +1,6 @@
+use_proxy: true
+download_proxy_list: false
+prune_invalid_proxies: false
+notify_by_mail: false
+tasks_from_yaml: true
+headless_web_browser: true
